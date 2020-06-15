@@ -1,0 +1,36 @@
+MySQL
+
+Database:
+
+	User:
+		email
+		username
+		name
+		adress
+		phone_number
+		password
+		age
+		sex
+		profile_picture
+		description
+		country_origin
+	Country:
+		id
+		name
+	City:
+		id
+		country_id
+		name
+	Post:
+		city_id
+		user_id
+		text
+		images
+	City_rating:
+		city_id
+		night_life
+		sights
+		transportation
+		food
+		hospitality
+		crime_rate
