@@ -1,8 +1,9 @@
 from django.contrib.auth.models import Group, User
 from rest_framework import viewsets
 
-from quickstart.serializers import ProfileSerializer, GroupSerializer, UserSerializer, CountrySerializer, CitySerializer
-from quickstart.models import Profile, Country, City
+from quickstart.serializers import ProfileSerializer, GroupSerializer, UserSerializer, CountrySerializer, \
+    CitySerializer, PostSerializer, CityRatingSerializer
+from quickstart.models import Profile, Country, City, Post, CityRating
 
 
 class UserViewSet(viewsets.ModelViewSet):
@@ -10,12 +11,12 @@ class UserViewSet(viewsets.ModelViewSet):
     serializer_class = UserSerializer
 
 
-class CountryView(viewsets.ModelViewSet):
+class CountryViewSet(viewsets.ModelViewSet):
     queryset = Country.objects.all()
     serializer_class = CountrySerializer
 
 
-class ProfileView(viewsets.ModelViewSet):
+class ProfileViewSet(viewsets.ModelViewSet):
     queryset = Profile.objects.all()
     serializer_class = ProfileSerializer
 
@@ -28,3 +29,13 @@ class GroupViewSet(viewsets.ModelViewSet):
 class CityViewSet(viewsets.ModelViewSet):
     queryset = City.objects.all()
     serializer_class = CitySerializer
+
+
+class PostViewSet(viewsets.ModelViewSet):
+    queryset = Post.objects.all()
+    serializer_class = PostSerializer
+
+
+class CityRatingViewSet(viewsets.ModelViewSet):
+    queryset = CityRating.objects.all()
+    serializer_class = CityRatingSerializer
