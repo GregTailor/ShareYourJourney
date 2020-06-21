@@ -4,10 +4,12 @@ from quickstart import views
 
 router = routers.DefaultRouter()
 router.register(r'users', views.UserViewSet)
-router.register(r'countries', views.CountryView)
-router.register(r'profiles', views.ProfileView)
+router.register(r'countries', views.CountryViewSet)
+router.register(r'profiles', views.ProfileViewSet)
 router.register(r'groups', views.GroupViewSet)
 router.register(r'cities', views.CityViewSet)
+router.register(r'posts', views.PostViewSet)
+router.register(r'city_ratings', views.CityRatingViewSet)
 
 # Wire up our API using automatic URL routing.
 # Additionally, we include login URLs for the browsable API.
